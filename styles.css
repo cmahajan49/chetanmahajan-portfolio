@@ -637,7 +637,7 @@ body{
 
   object-fit:cover;
 
-  object-position:50% 42%;
+  object-position:50% 46%;
 
   border:
     6px solid rgba(255,255,255,0.08);
@@ -681,7 +681,7 @@ body{
 
   object-fit:cover;
 
-  object-position:50% 42%;
+  object-position:50% 46%;
 
   filter:
     brightness(.92);
@@ -737,7 +737,7 @@ body{
     Thumbnail मध्ये सुद्धा face center
   */
 
-  object-position:50% 42%;
+  object-position:50% 46%;
 
   border-radius:7px;
 
@@ -1475,7 +1475,7 @@ body{
       Mobile face position
     */
 
-    object-position:50% 42%;
+    object-position:50% 46%;
 
     border-radius:50%;
   }
@@ -1485,7 +1485,7 @@ body{
 
     height:220px;
 
-    object-position:50% 42%;
+    object-position:50% 46%;
 
     transform:none;
   }
@@ -1591,7 +1591,7 @@ body{
 
   .hero-image,
   .hero-image-back{
-    object-position:50% 42%;
+    object-position:50% 46%;
   }
 }
 
