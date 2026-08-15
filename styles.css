@@ -579,6 +579,11 @@ body{
     1px solid rgba(255,255,255,0.07);
 }
 
+
+/* =========================
+   FACE CENTER PHOTO
+========================= */
+
 .hero-image-wrap{
   position:relative;
 
@@ -587,6 +592,12 @@ body{
   height:340px;
 
   margin-left:-28px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
 }
 
 .hero-image{
@@ -596,9 +607,14 @@ body{
 
   border-radius:50%;
 
+  /*
+    IMPORTANT:
+    Face center करण्यासाठी
+    vertical position 30% ठेवली आहे.
+  */
   object-fit:cover;
 
-  object-position:center center;
+  object-position:50% 30%;
 
   border:
     6px solid rgba(255,255,255,0.08);
@@ -632,6 +648,10 @@ body{
     brightness(.92);
 
   border-radius:50%;
+
+  object-fit:cover;
+
+  object-position:50% 30%;
 }
 
 .hero-image-front{
@@ -674,6 +694,8 @@ body{
   height:56px;
 
   object-fit:cover;
+
+  object-position:50% 30%;
 
   border-radius:7px;
 
@@ -1382,6 +1404,11 @@ body{
     margin-top:15px;
   }
 
+
+  /* =========================
+     MOBILE FACE CENTER
+  ========================= */
+
   .hero-image-wrap{
     width:220px;
 
@@ -1395,14 +1422,20 @@ body{
 
     height:220px;
 
-    object-position:center center;
+    /*
+      Mobile वर face center
+    */
+    object-position:50% 30%;
 
     border-radius:50%;
   }
 
   .hero-image-back{
     transform:none;
+
+    object-position:50% 30%;
   }
+
 
   .skills-grid{
     grid-template-columns:
