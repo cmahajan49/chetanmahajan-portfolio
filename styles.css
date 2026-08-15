@@ -299,7 +299,9 @@ body{
 }
 
 
-/* Instagram */
+/* =========================
+   INSTAGRAM
+========================= */
 
 .social-link[href*="instagram.com"]{
   color:#fff;
@@ -367,7 +369,9 @@ body{
 }
 
 
-/* Premium heading */
+/* =========================
+   PREMIUM HEADING
+========================= */
 
 .hero-content h1 span{
   color:#fff;
@@ -385,7 +389,6 @@ body{
 
   -webkit-text-fill-color:transparent;
 }
-
 
 .lead{
   color:#a1a1aa;
@@ -439,7 +442,8 @@ body{
 
   transition:
     background .25s ease,
-    border-color .25s ease;
+    border-color .25s ease,
+    transform .25s ease;
 }
 
 .badge:hover{
@@ -448,6 +452,9 @@ body{
 
   border-color:
     rgba(255,255,255,0.18);
+
+  transform:
+    translateY(-2px);
 }
 
 
@@ -505,7 +512,9 @@ body{
 }
 
 
-/* Primary button */
+/* =========================
+   PRIMARY BUTTON
+========================= */
 
 .btn.primary{
   background:#fff;
@@ -526,7 +535,9 @@ body{
 }
 
 
-/* Ghost */
+/* =========================
+   GHOST BUTTON
+========================= */
 
 .btn.ghost{
   background:
@@ -581,7 +592,7 @@ body{
 
 
 /* =========================
-   FACE CENTER PHOTO
+   PROFILE PHOTO WRAPPER
 ========================= */
 
 .hero-image-wrap{
@@ -600,6 +611,11 @@ body{
   justify-content:center;
 }
 
+
+/* =========================
+   MAIN PROFILE IMAGE
+========================= */
+
 .hero-image{
   width:340px;
 
@@ -607,14 +623,21 @@ body{
 
   border-radius:50%;
 
+  display:block;
+
   /*
     IMPORTANT:
-    Face center करण्यासाठी
-    vertical position 30% ठेवली आहे.
+
+    फोटो circle मध्ये face खाली आणण्यासाठी
+    vertical position 42% ठेवली आहे.
+
+    50% = normal center
+    42% = face थोडा खाली visual center मध्ये
   */
+
   object-fit:cover;
 
-  object-position:50% 30%;
+  object-position:50% 42%;
 
   border:
     6px solid rgba(255,255,255,0.08);
@@ -627,11 +650,19 @@ body{
     0 0 60px
       rgba(255,255,255,0.06);
 
-  display:block;
+  /*
+    Floating animation फक्त हलका आहे.
+    Photo positioning disturb होणार नाही.
+  */
 
   animation:
-    float 7s ease-in-out infinite;
+    profileFloat 7s ease-in-out infinite;
 }
+
+
+/* =========================
+   BACK PROFILE IMAGE
+========================= */
 
 .hero-image-back{
   position:absolute;
@@ -640,19 +671,26 @@ body{
 
   top:0;
 
-  transform:none;
+  width:340px;
+
+  height:340px;
 
   z-index:1;
-
-  filter:
-    brightness(.92);
 
   border-radius:50%;
 
   object-fit:cover;
 
-  object-position:50% 30%;
+  object-position:50% 42%;
+
+  filter:
+    brightness(.92);
 }
+
+
+/* =========================
+   FRONT PROFILE IMAGE
+========================= */
 
 .hero-image-front{
   position:relative;
@@ -695,7 +733,11 @@ body{
 
   object-fit:cover;
 
-  object-position:50% 30%;
+  /*
+    Thumbnail मध्ये सुद्धा face center
+  */
+
+  object-position:50% 42%;
 
   border-radius:7px;
 
@@ -1199,7 +1241,9 @@ body{
 }
 
 
-/* Timeline line */
+/* =========================
+   TIMELINE LINE
+========================= */
 
 #experience .container::before{
   content:"";
@@ -1246,27 +1290,24 @@ body{
 
 
 /* =========================
-   HERO FLOAT
+   PROFILE FLOAT
 ========================= */
 
-@keyframes float{
+@keyframes profileFloat{
 
   0%{
     transform:
-      translateY(0)
-      rotate(-1deg);
+      translateY(0);
   }
 
   50%{
     transform:
-      translateY(-9px)
-      rotate(1deg);
+      translateY(-8px);
   }
 
   100%{
     transform:
-      translateY(0)
-      rotate(-1deg);
+      translateY(0);
   }
 }
 
@@ -1406,7 +1447,7 @@ body{
 
 
   /* =========================
-     MOBILE FACE CENTER
+     MOBILE PROFILE PHOTO
   ========================= */
 
   .hero-image-wrap{
@@ -1415,6 +1456,12 @@ body{
     height:220px;
 
     margin-left:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
   }
 
   .hero-image{
@@ -1422,20 +1469,31 @@ body{
 
     height:220px;
 
+    object-fit:cover;
+
     /*
-      Mobile वर face center
+      Mobile face position
     */
-    object-position:50% 30%;
+
+    object-position:50% 42%;
 
     border-radius:50%;
   }
 
   .hero-image-back{
-    transform:none;
+    width:220px;
 
-    object-position:50% 30%;
+    height:220px;
+
+    object-position:50% 42%;
+
+    transform:none;
   }
 
+
+  /* =========================
+     MOBILE SKILLS
+  ========================= */
 
   .skills-grid{
     grid-template-columns:
@@ -1455,6 +1513,11 @@ body{
 
     height:38px;
   }
+
+
+  /* =========================
+     COMMUNITY
+  ========================= */
 
   .community-card{
     flex-direction:column;
@@ -1520,6 +1583,15 @@ body{
 
   #experience .card::before{
     left:-21px;
+  }
+
+  /*
+    Small mobile face position
+  */
+
+  .hero-image,
+  .hero-image-back{
+    object-position:50% 42%;
   }
 }
 
