@@ -1,6 +1,6 @@
 # Chetan Mahajan — Portfolio
 
-This is a minimal, responsive static portfolio template for Akash Gaikwad.
+This is a minimal, responsive static portfolio template for Chetan Mahajan.
 
 How to use
 
